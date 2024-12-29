@@ -2,7 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import morgan from 'morgan'
-import { userRegistration } from './controllers'
+import { getUsersById, userRegistration } from './controllers'
 dotenv.config()
 
 const app = express()
@@ -29,6 +29,7 @@ app.get('/health',(_req,res) =>{
 
 //routes
 app.post('/auth/registration',userRegistration)
+app.get('/auth/users/:auth0Id',getUsersById)
 
 
 
