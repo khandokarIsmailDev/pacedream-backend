@@ -8,5 +8,8 @@ export const UserCreateSchema = z.object({
     bio:z.string().optional(),
     dob:z.string().optional(),
     email:z.string().optional(),
-    mobile:z.string().optional()
+    mobile:z.string().optional(),
+    role:z.string().optional(),
+    verified:z.boolean().optional(),
+    status:z.string().optional()
 })
