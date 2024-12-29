@@ -33,8 +33,11 @@ const userRegistration = async (
     const user = await prisma.user.create({
       data: userData,
     });
-    res.status(201).json({ message: "user-created-successfully", user });
-    return;
+    res.status(201).json({
+        message: "user-created-successfully",
+        data: user
+      });
+      return
   } catch (error) {
     console.log(error);
     next(error);
