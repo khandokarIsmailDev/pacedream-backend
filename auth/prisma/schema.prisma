@@ -20,9 +20,10 @@ enum Role {
 }
 
 enum AccountStatus {
+  PENDING
   ACTIVE
-  SUSPENDED
-  DELETED
+  INACTIVE
+  BLOCKED
 }
 
 
