@@ -41,8 +41,11 @@ const userRegistration = async (
     });
     return;
   } catch (error) {
-    console.log(error);
-    next(error);
+    console.error('Database query error:', error);
+    res.status(500).json({ 
+      error: 'Database connection error',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 };
 

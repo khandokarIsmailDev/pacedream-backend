@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts",
-    "build": "tsc && tsc-alias",
-    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy && tsc && tsc-alias",
+    "build": "prisma generate && tsc && tsc-alias",
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy"
   },
