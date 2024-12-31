@@ -46,3 +46,6 @@ const serviceName = process.env.SERVICE_NAME || 'user-service'
 app.listen(port,() =>{
     console.log(`${serviceName} running on port ${port}`)
 })
+
+//for vercel production
+export default app
