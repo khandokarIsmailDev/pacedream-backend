@@ -10,6 +10,11 @@ app.use(express.json())
 app.use(cors())
 app.use(morgan('dev'))
 
+//routes
+
+app.get('/',(_req,res) =>{
+    res.status(200).json({message:"hello world"})
+})
 
 app.get('/health',(_req,res) =>{
     res.status(200).json({status:"up"})
