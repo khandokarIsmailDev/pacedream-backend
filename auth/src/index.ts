@@ -46,13 +46,13 @@ app.use((err:any,_req:any,res:any,_next:any) =>{
 
 
 // Remove or comment out this part for Vercel deployment
-// const port = process.env.PORT || 4003
-// const serviceName = process.env.SERVICE_NAME || 'user-service'
+const port = process.env.PORT || 4003
+const serviceName = process.env.SERVICE_NAME || 'user-service'
 
 
-// app.listen(port,() =>{
-//     console.log(`${serviceName} running on port ${port}`)
-// })
+app.listen(port,() =>{
+    console.log(`${serviceName} running on port ${port}`)
+})
 
 //for vercel production
 export default app
